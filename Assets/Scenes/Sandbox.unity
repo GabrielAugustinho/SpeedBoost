@@ -426,11 +426,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1094476025, guid: 3892dac20f019cd448da096563cc04e3, type: 3}
       propertyPath: m_Drag
-      value: 0.25
+      value: 0.52
       objectReference: {fileID: 0}
-    - target: {fileID: 1094476025, guid: 3892dac20f019cd448da096563cc04e3, type: 3}
-      propertyPath: m_Constraints
-      value: 56
+    - target: {fileID: 1094476026, guid: 3892dac20f019cd448da096563cc04e3, type: 3}
+      propertyPath: mainThrust
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 2023028306, guid: 3892dac20f019cd448da096563cc04e3, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 32b2ccf972b4d9a4d96b893f43215dc1, type: 3}
+    - target: {fileID: 2023028306, guid: 3892dac20f019cd448da096563cc04e3, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 684387580503762128, guid: 3892dac20f019cd448da096563cc04e3, type: 3}
       propertyPath: m_RootOrder
