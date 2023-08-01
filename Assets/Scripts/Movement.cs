@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Movement : MonoBehaviour
-{
-    Rigidbody rb;
-    AudioSource audioSource;
+{    
     [SerializeField] private float mainThrust = 1000f;
     [SerializeField] private float rotationThrust = 100f;
+    [SerializeField] private AudioClip mainAudio;
+
+    Rigidbody rb;
+    AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +32,7 @@ public class Movement : MonoBehaviour
             rb.AddRelativeForce(Vector3.up * mainThrust * Time.deltaTime);
             if(!audioSource.isPlaying)
             {
-                audioSource.Play();
+                audioSource.PlayOneShot(mainAudio);
             }
        }
        else
@@ -53,8 +55,8 @@ public class Movement : MonoBehaviour
 
     private void ApplyRotation(float rotationThisFrame)
     {
-        rb.freezeRotation = true; // Permite rotacoes caso colide em algo
+        rb.freezeRotation = true;
         transform.Rotate(Vector3.forward * rotationThisFrame * Time.deltaTime);
-        rb.freezeRotation = false; // A rodacao nao e mais permitida
+        rb.freezeRotation = false;
     }
 }
