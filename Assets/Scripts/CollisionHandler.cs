@@ -14,15 +14,33 @@ public class CollisionHandler : MonoBehaviour
     AudioSource audioSource;
 
     bool isTransitioling = false;
+    bool collisionDisabled = false;
 
     void Start() 
     {
         audioSource = GetComponent<AudioSource>();
     }
 
+    private void Update() 
+    {
+        RespondToDebugKeys();    
+    }
+
+    void RespondToDebugKeys()
+    {
+        if(Input.GetKeyDown(KeyCode.L))
+        {
+            LoadNextLevel();
+        }
+        else if(Input.GetKeyDown(KeyCode.C))
+        {
+            collisionDisabled = !collisionDisabled;
+        }
+    }
+
     void OnCollisionEnter(Collision other)
     {
-        if(isTransitioling) { return; }
+        if(isTransitioling || collisionDisabled) { return; }
 
         switch(other.gameObject.tag)
         {           
