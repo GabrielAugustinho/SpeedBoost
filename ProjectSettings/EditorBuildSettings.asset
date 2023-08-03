@@ -9,6 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Sandbox.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/OverLv2.unity
-    guid: caf4be68ebb07bc43adc5b4fbcbcb0fb
+    path: Assets/Scenes/SmallRole.unity
+    guid: db3b3201913821c4b8ee4b372c3c1898
+  - enabled: 1
+    path: Assets/Scenes/LikeFlapy.unity
+    guid: f8a3b6ea01fc7814cab7fe1a01702ac7
+  - enabled: 1
+    path: Assets/Scenes/FlyObstacles.unity
+    guid: 6f3af175ad62c294e808159f0675a187
   m_configObjects: {}
